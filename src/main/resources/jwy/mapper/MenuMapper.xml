@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zking.ssm.xlw.mapper.MenuMapper">
+  <resultMap id="BaseResultMap" type="com.zking.ssm.xlw.model.Menu">
+    <id column="mid" jdbcType="INTEGER" property="mid" />
+    <result column="kname" jdbcType="VARCHAR" property="kname" />
+    <result column="cyname" jdbcType="VARCHAR" property="cyname" />
+    <result column="complaint" jdbcType="VARCHAR" property="complaint" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mid, kname, cyname, complaint
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zking.ssm.xlw.model.Menu">
+    insert into menu (mid, kname, cyname, 
+      complaint)
+    values (#{mid,jdbcType=INTEGER}, #{kname,jdbcType=VARCHAR}, #{cyname,jdbcType=VARCHAR}, 
+      #{complaint,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.ssm.xlw.model.Menu">
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        mid,
+      </if>
+      <if test="kname != null">
+        kname,
+      </if>
+      <if test="cyname != null">
+        cyname,
+      </if>
+      <if test="complaint != null">
+        complaint,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="kname != null">
+        #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        #{complaint,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.ssm.xlw.model.Menu">
+    update menu
+    <set>
+      <if test="kname != null">
+        kname = #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        cyname = #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        complaint = #{complaint,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.ssm.xlw.model.Menu">
+    update menu
+    set kname = #{kname,jdbcType=VARCHAR},
+      cyname = #{cyname,jdbcType=VARCHAR},
+      complaint = #{complaint,jdbcType=VARCHAR}
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zking.ssm.jwy.model.Menu">
+    <id column="mid" jdbcType="INTEGER" property="mid" />
+    <result column="kname" jdbcType="VARCHAR" property="kname" />
+    <result column="cyname" jdbcType="VARCHAR" property="cyname" />
+    <result column="complaint" jdbcType="VARCHAR" property="complaint" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mid, kname, cyname, complaint
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zking.ssm.jwy.model.Menu">
+    insert into menu (mid, kname, cyname, 
+      complaint)
+    values (#{mid,jdbcType=INTEGER}, #{kname,jdbcType=VARCHAR}, #{cyname,jdbcType=VARCHAR}, 
+      #{complaint,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.ssm.jwy.model.Menu">
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        mid,
+      </if>
+      <if test="kname != null">
+        kname,
+      </if>
+      <if test="cyname != null">
+        cyname,
+      </if>
+      <if test="complaint != null">
+        complaint,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="kname != null">
+        #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        #{complaint,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.ssm.jwy.model.Menu">
+    update menu
+    <set>
+      <if test="kname != null">
+        kname = #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        cyname = #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        complaint = #{complaint,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.ssm.jwy.model.Menu">
+    update menu
+    set kname = #{kname,jdbcType=VARCHAR},
+      cyname = #{cyname,jdbcType=VARCHAR},
+      complaint = #{complaint,jdbcType=VARCHAR}
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zking.ssm.hhl.model.Menu">
+    <id column="mid" jdbcType="INTEGER" property="mid" />
+    <result column="kname" jdbcType="VARCHAR" property="kname" />
+    <result column="cyname" jdbcType="VARCHAR" property="cyname" />
+    <result column="complaint" jdbcType="VARCHAR" property="complaint" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mid, kname, cyname, complaint
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zking.ssm.hhl.model.Menu">
+    insert into menu (mid, kname, cyname, 
+      complaint)
+    values (#{mid,jdbcType=INTEGER}, #{kname,jdbcType=VARCHAR}, #{cyname,jdbcType=VARCHAR}, 
+      #{complaint,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.ssm.hhl.model.Menu">
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        mid,
+      </if>
+      <if test="kname != null">
+        kname,
+      </if>
+      <if test="cyname != null">
+        cyname,
+      </if>
+      <if test="complaint != null">
+        complaint,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="kname != null">
+        #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        #{complaint,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.ssm.hhl.model.Menu">
+    update menu
+    <set>
+      <if test="kname != null">
+        kname = #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        cyname = #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        complaint = #{complaint,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.ssm.hhl.model.Menu">
+    update menu
+    set kname = #{kname,jdbcType=VARCHAR},
+      cyname = #{cyname,jdbcType=VARCHAR},
+      complaint = #{complaint,jdbcType=VARCHAR}
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zking.ssm.ohj.model.Menu">
+    <id column="mid" jdbcType="INTEGER" property="mid" />
+    <result column="kname" jdbcType="VARCHAR" property="kname" />
+    <result column="cyname" jdbcType="VARCHAR" property="cyname" />
+    <result column="complaint" jdbcType="VARCHAR" property="complaint" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mid, kname, cyname, complaint
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zking.ssm.ohj.model.Menu">
+    insert into menu (mid, kname, cyname, 
+      complaint)
+    values (#{mid,jdbcType=INTEGER}, #{kname,jdbcType=VARCHAR}, #{cyname,jdbcType=VARCHAR}, 
+      #{complaint,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.ssm.ohj.model.Menu">
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        mid,
+      </if>
+      <if test="kname != null">
+        kname,
+      </if>
+      <if test="cyname != null">
+        cyname,
+      </if>
+      <if test="complaint != null">
+        complaint,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="kname != null">
+        #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        #{complaint,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.ssm.ohj.model.Menu">
+    update menu
+    <set>
+      <if test="kname != null">
+        kname = #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        cyname = #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        complaint = #{complaint,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.ssm.ohj.model.Menu">
+    update menu
+    set kname = #{kname,jdbcType=VARCHAR},
+      cyname = #{cyname,jdbcType=VARCHAR},
+      complaint = #{complaint,jdbcType=VARCHAR}
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zking.ssm.llq.model.Menu">
+    <id column="mid" jdbcType="INTEGER" property="mid" />
+    <result column="kname" jdbcType="VARCHAR" property="kname" />
+    <result column="cyname" jdbcType="VARCHAR" property="cyname" />
+    <result column="complaint" jdbcType="VARCHAR" property="complaint" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mid, kname, cyname, complaint
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zking.ssm.llq.model.Menu">
+    insert into menu (mid, kname, cyname, 
+      complaint)
+    values (#{mid,jdbcType=INTEGER}, #{kname,jdbcType=VARCHAR}, #{cyname,jdbcType=VARCHAR}, 
+      #{complaint,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.ssm.llq.model.Menu">
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        mid,
+      </if>
+      <if test="kname != null">
+        kname,
+      </if>
+      <if test="cyname != null">
+        cyname,
+      </if>
+      <if test="complaint != null">
+        complaint,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="kname != null">
+        #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        #{complaint,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.ssm.llq.model.Menu">
+    update menu
+    <set>
+      <if test="kname != null">
+        kname = #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        cyname = #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        complaint = #{complaint,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.ssm.llq.model.Menu">
+    update menu
+    set kname = #{kname,jdbcType=VARCHAR},
+      cyname = #{cyname,jdbcType=VARCHAR},
+      complaint = #{complaint,jdbcType=VARCHAR}
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zking.ssm.model.Menu">
+    <id column="mid" jdbcType="INTEGER" property="mid" />
+    <result column="kname" jdbcType="VARCHAR" property="kname" />
+    <result column="cyname" jdbcType="VARCHAR" property="cyname" />
+    <result column="complaint" jdbcType="VARCHAR" property="complaint" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mid, kname, cyname, complaint
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from menu
+    where mid = #{mid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zking.ssm.model.Menu">
+    insert into menu (mid, kname, cyname, 
+      complaint)
+    values (#{mid,jdbcType=INTEGER}, #{kname,jdbcType=VARCHAR}, #{cyname,jdbcType=VARCHAR}, 
+      #{complaint,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.ssm.model.Menu">
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        mid,
+      </if>
+      <if test="kname != null">
+        kname,
+      </if>
+      <if test="cyname != null">
+        cyname,
+      </if>
+      <if test="complaint != null">
+        complaint,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mid != null">
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="kname != null">
+        #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        #{complaint,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.ssm.model.Menu">
+    update menu
+    <set>
+      <if test="kname != null">
+        kname = #{kname,jdbcType=VARCHAR},
+      </if>
+      <if test="cyname != null">
+        cyname = #{cyname,jdbcType=VARCHAR},
+      </if>
+      <if test="complaint != null">
+        complaint = #{complaint,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.ssm.model.Menu">
+    update menu
+    set kname = #{kname,jdbcType=VARCHAR},
+      cyname = #{cyname,jdbcType=VARCHAR},
+      complaint = #{complaint,jdbcType=VARCHAR}
+    where mid = #{mid,jdbcType=INTEGER}
+  </update>
+</mapper>
